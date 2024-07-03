@@ -1,0 +1,29 @@
+﻿@model IEnumerable<ToDoItem>
+
+<h1>Список задач</h1>
+
+<p>
+    <a href="/ToDoItems/Create">Добавить новую задачу</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Название
+            </th>
+            <th>
+                Завершена
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Title</td>
+                <td>@item.IsCompleted</td>
+            </tr>
+        }
+    </tbody>
+</table>
